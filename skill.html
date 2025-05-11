@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at center, #1f1c2c, #928dab);
+      color: #fff;
+      background-attachment: fixed;
+      min-height: 100vh;
+      padding-top: 100px;
+      transition: opacity 1s ease-in;
+      overflow-x: hidden;
+      opacity: 0;
+    }
+
+    nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.7rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .skills-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .skills-container h1 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+      text-align: center;
+      color: #f9f9f9;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .skill-box {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 30px 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+      transition: transform 0.4s ease, background 0.3s;
+      cursor: default;
+    }
+
+    .skill-box:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: scale(1.03);
+    }
+
+    .skill-box h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #fffacd;
+    }
+
+    .skill-box p {
+      font-size: 1rem;
+      color: #dddddd;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Skills</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="information.html">About Me</a>
+      <a href="project.html">Projects</a>
+      <a href="skill.html">Skills</a>
+      <a href="certification.html">Certifications</a>
+      <a href="about.html">Contact</a>
+      <a href="resume.html">Resume</a>
+      <a href="login.html">Logout</a>
+    </div>
+  </nav>
+
+  <div class="skills-container">
+    <h1 data-aos="fade-down">My Skills</h1>
+
+    <div class="skills-grid">
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="100">
+        <h2>HTML & CSS</h2>
+        <p>Responsive and semantic web design with accessibility focus.</p>
+      </div>
+
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="200">
+        <h2>JavaScript</h2>
+        <p>Dynamic interactivity and modern ES6+ concepts.</p>
+      </div>
+
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="300">
+        <h2>React.js</h2>
+        <p>Component-based SPA architecture using hooks and state management.</p>
+      </div>
+
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="400">
+        <h2>Python</h2>
+        <p>Efficient scripting, automation, and backend logic.</p>
+      </div>
+
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="500">
+        <h2>SQL & Databases</h2>
+        <p>Advanced querying, joins, normalization, and data modeling.</p>
+      </div>
+
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="600">
+        <h2>Software Development</h2>
+        <p>End-to-end SDLC experience including testing and deployment.</p>
+      </div>
+
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="700">
+        <h2>Machine Learning</h2>
+        <p>Model building, training, and evaluation using Python libraries.</p>
+      </div>
+
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="800">
+        <h2>Computer Vision</h2>
+        <p>Image classification, segmentation, and OpenCV pipelines.</p>
+      </div>
+
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="900">
+        <h2>Web Development</h2>
+        <p>Full-stack expertise with frontend frameworks and backend APIs.</p>
+      </div>
+
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="1000">
+        <h2>Software Engineering</h2>
+        <p>Agile, clean code, version control, and system design principles.</p>
+      </div>
+
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="1100">
+        <h2>Data Structures</h2>
+        <p>Mastery in trees, graphs, queues, and complexity analysis.</p>
+      </div>
+
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="1200">
+        <h2>Algorithms</h2>
+        <p>Proficiency in recursion, dynamic programming, and greedy approaches.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.style.opacity = "1";
+      AOS.init({ once: true });
+    });
+  </script>
+</body>
+</html>

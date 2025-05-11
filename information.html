@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #fff;
+      min-height: 100vh;
+      padding-top: 80px; /* Add space for navbar */
+    }
+
+    nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+   .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      padding: 10px 15px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      max-width: 1200px;
+      margin: auto;
+      gap: 40px;
+      padding: 40px 20px;
+    }
+
+    .profile-image {
+      flex: 1;
+      min-width: 280px;
+      max-width: 350px;
+      text-align: center;
+    }
+
+    .profile-image img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .about-content {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .about-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .contact-info {
+      margin-top: 30px;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
+      font-size: 1rem;
+    }
+
+    .contact-info i {
+      margin-right: 10px;
+      color: #0bdceb;
+    }
+
+    .interests {
+      margin-top: 10px;
+      padding: 20px;
+    }
+
+    .interests h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .interest-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .interest-tags span {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .interest-tags span:hover {
+      background: rgba(11, 220, 235, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+      }
+
+      .navbar ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      body {
+        padding-top: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">About me</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+       <a href= "information.html">About me</a>
+      <a href="project.html">Projects</a>
+      <a href="skill.html">Skills</a>
+      <a href="certification.html">Certifications</a>
+      <a href="about.html">Contact Details</a>
+      <a href="resume.html">Resume</a>
+      <a href="login.html">Logout</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="profile-image">
+      <img src="userimage.png" alt="Your Image"/>
+    </div>
+
+    <div class="about-content">
+      <h1>About Me</h1>
+      <p>
+        Hello! I’m Dr.Satya Mahonar, a passionate developer with a deep interest in building innovative software solutions. I enjoy solving complex problems and continuously learning new technologies. Whether it's developing robust back-end services or creating sleek front-end interfaces, I strive to write clean and efficient code.
+      </p>
+      <p>
+        I'm currently focusing on enhancing my skills in machine learning and AI, and I love working on projects that blend creativity with technical precision. I'm driven, curious, and always open to new challenges.
+      </p>
+
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i>Email: 2300033333@kluniversity.in</p>
+        <p><i class="fas fa-phone"></i>Phone: +91 9999999999</p>
+        <p><i class="fas fa-map-marker-alt"></i>Address: KL University, Andhra Pradesh, India</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="interests">
+    <h2>Interests</h2>
+    <div class="interest-tags">
+      <span>Software Development</span>
+      <span>Machine Learning</span>
+      <span>Computer Vision</span>
+      <span>Web Development</span>
+      <span>Software Engineering</span>
+      <span>Data Structures</span>
+      <span>Algorithms</span>
+    </div>
+  </div>
+
+</body>
+</html>

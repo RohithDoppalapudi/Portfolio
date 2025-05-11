@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      color: white;
+      background: radial-gradient(circle at center, #1f1c2c, #928dab);
+      overflow: hidden;
+    }
+
+    nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      padding: 10px 15px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+    }
+
+    .section {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  gap: 250px; 
+  text-align: left;
+}
+
+
+.text-content {
+  max-width: 50%;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.home-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .animated-heading {
+      opacity: 0;
+      animation: fadeSlideUp 1.5s ease-out forwards;
+    }
+
+    .intro-text {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ff4c68;
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .typed-text {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ff4c68;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1em;
+      background-color: #ff4c68;
+      animation: blink 0.7s steps(2, start) infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes fadeSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes blink {
+      to {
+        visibility: hidden;
+      }
+    }
+
+    .icon-links {
+      margin-top: 30px;
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      font-size: 1.8rem;
+    }
+
+    .icon-links a {
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    .icon-links a:hover {
+      color: #ff4c68;
+    }
+
+    footer {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      padding: 15px 0;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+ <nav>
+    <div class="logo">My Portfolio</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+       <a href= "information.html">About me</a>
+      <a href="project.html">Projects</a>
+      <a href="skill.html">Skills</a>
+      <a href="certification.html">Certifications</a>
+      <a href="about.html">Contact Details</a>
+      <a href="resume.html">Resume</a>
+      <a href="login.html">Logout</a>
+    </div>
+  </nav>
+
+
+ <section class="section">
+  <div class="text-content">
+    <h1 class="animated-heading">Dr. Satya Mahonar</h1>
+    <div class="intro-text">
+      <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+    </div>
+
+    <!-- Place the icons here -->
+    <div class="icon-links">
+      <a href="https://www.linkedin.com/in/rohith-doppalapudi-b6347a299/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/RohithDoppalapudi" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/1256_r_o_h_i_t_h_/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <img src="userimage.png" alt="Profile Image" class="home-image" />
+</section>
+
+
+  <script>
+    const text = "B.Tech Professor";
+    const typedTextSpan = document.querySelector(".typed-text");
+    const cursorSpan = document.querySelector(".cursor");
+
+    let charIndex = 0;
+    let typingDelay = 100;
+
+    function type() {
+      if (charIndex < text.length) {
+        typedTextSpan.textContent += text.charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingDelay);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(type, 1000);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certifications - Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      color: white;
+      background: radial-gradient(circle at center, #1f1c2c, #928dab);
+      background-attachment: fixed;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: 0.3s ease-in-out;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
+
+    .certifications-container {
+      margin-top: 120px;
+      width: 90%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .certification-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      padding: 20px;
+      border-radius: 15px;
+      width: 280px;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+      transform: translateY(50px);
+      opacity: 0;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      animation: slideUp 1s ease-out forwards;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .certification-card:nth-child(1) { animation-delay: 0.2s; }
+    .certification-card:nth-child(2) { animation-delay: 0.4s; }
+    .certification-card:nth-child(3) { animation-delay: 0.6s; }
+    .certification-card:nth-child(4) { animation-delay: 0.8s; }
+
+    .certification-card:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: scale(1.06);
+      box-shadow: 0 12px 25px rgba(255, 255, 255, 0.2);
+    }
+
+    .certification-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .certification-card h2 {
+      margin: 10px 0;
+      font-size: 1.3rem;
+      color: #fff;
+    }
+
+    .certification-card p {
+      font-size: 0.95rem;
+      color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Certifications</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="information.html">About me</a>
+      <a href="project.html">Projects</a>
+      <a href="skill.html">Skills</a>
+      <a href="certification.html">Certifications</a>
+      <a href="about.html">Contact Details</a>
+      <a href="resume.html">Resume</a>
+      <a href="login.html">Logout</a>
+    </div>
+  </nav>
+
+  <div class="certifications-container">
+    <div class="certification-card">
+      <img src="certificate1.jpg" alt="Certification 1">
+      <h2>Python Programming</h2>
+      <p>Issued by XYZ Academy</p>
+    </div>
+    <div class="certification-card">
+      <img src="certificate2.jpg" alt="Certification 2">
+      <h2>Data Science</h2>
+      <p>Issued by ABC University</p>
+    </div>
+    <div class="certification-card">
+      <img src="certificate3.jpg" alt="Certification 3">
+      <h2>AWS Certified Cloud Practitioner</h2>
+      <p>Issued by Amazon AWS</p>
+    </div>
+    <div class="certification-card">
+      <img src="certificate4.jpg" alt="Certification 4">
+      <h2>Machine Learning</h2>
+      <p>Issued by Stanford University</p>
+    </div>
+  </div>
+</body>
+</html>
